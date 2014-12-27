@@ -41,7 +41,7 @@ row_5 = map(function_row5, reports)
 all_rows = [row_1, row_2, row_3, row_4, row_5]
 
 #Formats
-result_single_row = lambda x: row_h + ''.join(map(single_cell, x)) + row_f
-result_final = lambda x: table_h + ''.join(map(result_single_row, x)) + table_f
+result_single_row = lambda x: "\n\t" + row_h + ''.join(map(single_cell, x)) + row_f 
+result_final = lambda x: table_h +"\n\t" ''.join(map(result_single_row, x)) +"\n" + table_f
 
 print result_final(all_rows)
