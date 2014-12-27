@@ -37,9 +37,11 @@ print row_2
 
 result_single_row = lambda x: table_h + row_h + ''.join(map(rows, x)) + row_f 
 
-final_table = lambda x: table_h + ''.join(map(result_single_row(result_single_row, x))) + table_f
+print result_single_row(row1)
 
-res = final_table(rows_values)
+#final_table = lambda x: table_h + ''.join(map(result_single_row(result_single_row, x))) + table_f
+
+#res = final_table(rows_values)
 
 print res
 
