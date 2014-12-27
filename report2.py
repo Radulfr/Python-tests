@@ -19,6 +19,7 @@ r2 = [21,22,23,24,25]
 r3 = [31,32,33,34,35]
 reports = [r1,r2,r3]
 
+#Functions
 single_cell = lambda x: cell_h + str(x) + cell_f
 
 function_row1 = lambda x: x[ROW1]
