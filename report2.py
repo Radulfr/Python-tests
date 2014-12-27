@@ -21,12 +21,12 @@ row_f = "</tr>"
 row1 = lambda x: x[C1]
 row2 = lambda x: x[C2]
 
-rows_values = [row1, row2]
-
 #row = lambda x,row: x[row]
 
 row_1 = map(row1, reports)
 row_2 = map(row2, reports)
+
+all_rows = [row_1, row_2]
 
 #row_3 = map(row, reports,2)
 
@@ -35,9 +35,11 @@ print row_2
 #print row_3
 #result_single_row = lambda x: table_h + row_h + ''.join(map(rows, x)) + row_f +
 
-result_single_row = lambda x: table_h + row_h + ''.join(map(rows, x)) + row_f 
+result_single_row = lambda x: row_h + ''.join(map(rows, x)) + row_f
+result_final = lambda x: table_h + ''.join(map(result_single_row, x)) + table_f
 
-print result_single_row(row_1)
+#print result_single_row(row_1)
+print result_final(all_rows)
 
 #final_table = lambda x: table_h + ''.join(map(result_single_row(result_single_row, x))) + table_f
 #res = final_table(rows_values)
